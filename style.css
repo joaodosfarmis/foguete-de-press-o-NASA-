@@ -1,0 +1,142 @@
+/* Reset de margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Lista de Passos */
+.steps-container {
+    margin: 2.5rem 0;
+}
+
+/* Cards dos Passos */
+.step-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Números grandes */
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #4f46e5;
+    opacity: 0.3;
+    min-width: 50px;
+}
+
+/* Elementos Internos */
+.step-content h2 {
+    font-size: 1.4rem;
+    color: #1f2937;
+    margin-bottom: 0.4rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #4338ca;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    color: #4b5563;
+    margin-bottom: 1.2rem;
+}
+
+/* Botões */
+.btn-complete {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-complete:hover {
+    background-color: #3730a3;
+}
+
+/* Estilo Ativado via JavaScript (Passo Concluído) */
+.step-card.completed {
+    border-left: 6px solid #10b981;
+    background-color: #f0fdf4;
+}
+
+.step-card.completed .step-number {
+    color: #10b981;
+    opacity: 1;
+}
+
+.step-card.completed .btn-complete {
+    background-color: #10b981;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+/* Responsividade para telas menores (Celulares) */
+@media (max-width: 600px) {
+    .step-card {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

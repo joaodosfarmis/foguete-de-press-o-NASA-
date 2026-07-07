@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passo a Passo do Projeto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Guia do Projeto Acadêmico</h1>
+            <p>Acompanhe a nossa jornada passo a passo para construir um projeto do zero.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="steps-container">
+            
+            <article class="step-card" id="step-1">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h2>Planejamento e Ideia</h2>
+                    <span class="tag">Fase Inicial</span>
+                    <p>Antes de programar, defina o escopo do projeto. O que ele vai resolver? Desenhe as telas em um papel para clarear os objetivos e caminhos básicos.</p>
+                    <button class="btn-complete" onclick="toggleComplete('step-1')">Marcar como Concluído</button>
+                </div>
+            </article>
+
+            <article class="step-card" id="step-2">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h2>Configuração do Ambiente</h2>
+                    <span class="tag">Preparação</span>
+                    <p>Instale um bom editor de código (como o VS Code), organize as pastas do seu computador e crie os arquivos básicos para começar o trabalho de verdade.</p>
+                    <button class="btn-complete" onclick="toggleComplete('step-2')">Marcar como Concluído</button>
+                </div>
+            </article>
+
+            <article class="step-card" id="step-3">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h2>Mão na Massa: Código</h2>
+                    <span class="tag">Desenvolvimento</span>
+                    <p>Comece estruturando o HTML, depois estilize os componentes com o CSS e adicione qualquer comportamento inteligente necessário usando JavaScript.</p>
+                    <button class="btn-complete" onclick="toggleComplete('step-3')">Marcar como Concluído</button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Diário de Bordo do Projeto. Desenvolvido com HTML, CSS e JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
