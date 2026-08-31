@@ -3,56 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passo a Passo do Projeto</title>
+    <title>Diário de Bordo — Projeto Acadêmico</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <h1>Guia do Projeto Acadêmico</h1>
-            <p>Acompanhe a nossa jornada passo a passo para construir um projeto do zero.</p>
+    <!-- HEADER -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Projeto Acadêmico 2026</span>
+            <h1>Diário de Bordo</h1>
+            <p>Do zero até a entrega final — acompanhe cada etapa da nossa jornada.</p>
         </div>
+        <div class="hero-glow"></div>
     </header>
 
-    <main class="container">
-        <section class="steps-container">
-            
-            <article class="step-card" id="step-1">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h2>Planejamento e Ideia</h2>
-                    <span class="tag">Fase Inicial</span>
-                    <p>Antes de programar, defina o escopo do projeto. O que ele vai resolver? Desenhe as telas em um papel para clarear os objetivos e caminhos básicos.</p>
-                    <button class="btn-complete" onclick="toggleComplete('step-1')">Marcar como Concluído</button>
+    <main>
+        <!-- INTRODUÇÃO -->
+        <section class="section" id="introducao">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2>Introdução</h2>
                 </div>
-            </article>
-
-            <article class="step-card" id="step-2">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h2>Configuração do Ambiente</h2>
-                    <span class="tag">Preparação</span>
-                    <p>Instale um bom editor de código (como o VS Code), organize as pastas do seu computador e crie os arquivos básicos para começar o trabalho de verdade.</p>
-                    <button class="btn-complete" onclick="toggleComplete('step-2')">Marcar como Concluído</button>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <p>Todo grande projeto começa com uma ideia clara e um propósito definido. Nesta seção apresentamos o contexto, o problema que queremos resolver e os objetivos principais do nosso trabalho acadêmico.</p>
+                        <p>Aqui você encontrará a motivação por trás da escolha do tema, o público-alvo e a relevância da solução proposta.</p>
+                    </div>
+                    <div class="photo-placeholder">
+                        <span>📷 Espaço para foto de introdução</span>
+                        <small>Sugestão: imagem conceitual ou capa do projeto</small>
+                    </div>
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <article class="step-card" id="step-3">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h2>Mão na Massa: Código</h2>
-                    <span class="tag">Desenvolvimento</span>
-                    <p>Comece estruturando o HTML, depois estilize os componentes com o CSS e adicione qualquer comportamento inteligente necessário usando JavaScript.</p>
-                    <button class="btn-complete" onclick="toggleComplete('step-3')">Marcar como Concluído</button>
+        <!-- DESENVOLVIMENTO -->
+        <section class="section section-alt" id="desenvolvimento">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2>Desenvolvimento</h2>
                 </div>
-            </article>
+                <div class="content-grid reverse">
+                    <div class="photo-placeholder">
+                        <span>📷 Espaço para foto do processo</span>
+                        <small>Sugestão: capturas de tela, protótipos ou reuniões</small>
+                    </div>
+                    <div class="text-block">
+                        <p>Nesta fase transformamos ideias em realidade. Relatamos as decisões de design, as tecnologias escolhidas, os desafios enfrentados e as soluções encontradas ao longo do caminho.</p>
+                        <p>O desenvolvimento inclui pesquisa, prototipagem, codificação e testes contínuos até chegar a uma versão estável e funcional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- PASSO A PASSO -->
+        <section class="section" id="passo-a-passo">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>Passo a Passo</h2>
+                    <p class="section-subtitle">Marque cada etapa conforme for concluindo</p>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Passo 1 -->
+                    <article class="step-card" id="step-1">
+                        <div class="step-header">
+                            <div class="step-number">01</div>
+                            <span class="tag">Fase Inicial</span>
+                        </div>
+                        <h3>Planejamento e Ideia</h3>
+                        <p>Defina o escopo do projeto, o problema a ser resolvido e desenhe as telas principais em papel ou ferramenta de wireframe.</p>
+                        <div class="photo-placeholder small">
+                            <span>📷 Foto do planejamento</span>
+                        </div>
+                        <button class="btn-complete" onclick="toggleComplete('step-1')">Marcar como Concluído</button>
+                    </article>
+
+                    <!-- Passo 2 -->
+                    <article class="step-card" id="step-2">
+                        <div class="step-header">
+                            <div class="step-number">02</div>
+                            <span class="tag">Preparação</span>
+                        </div>
+                        <h3>Configuração do Ambiente</h3>
+                        <p>Instale o editor de código, organize as pastas do projeto e prepare os arquivos iniciais (HTML, CSS e JavaScript).</p>
+                        <div class="photo-placeholder small">
+                            <span>📷 Foto do ambiente</span>
+                        </div>
+                        <button class="btn-complete" onclick="toggleComplete('step-2')">Marcar como Concluído</button>
+                    </article>
+
+                    <!-- Passo 3 -->
+                    <article class="step-card" id="step-3">
+                        <div class="step-header">
+                            <div class="step-number">03</div>
+                            <span class="tag">Desenvolvimento</span>
+                        </div>
+                        <h3>Mão na Massa: Código</h3>
+                        <p>Estruture o HTML, estilize com CSS e adicione interatividade com JavaScript. Itere, teste e refine continuamente.</p>
+                        <div class="photo-placeholder small">
+                            <span>📷 Foto do código</span>
+                        </div>
+                        <button class="btn-complete" onclick="toggleComplete('step-3')">Marcar como Concluído</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- MATERIAIS -->
+        <section class="section section-alt" id="materiais">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>Materiais</h2>
+                </div>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <div class="material-icon">💻</div>
+                        <h4>Ferramentas</h4>
+                        <ul>
+                            <li>VS Code / Cursor</li>
+                            <li>Git & GitHub</li>
+                            <li>Figma (protótipos)</li>
+                            <li>Chrome DevTools</li>
+                        </ul>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-icon">📚</div>
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li>Documentação MDN</li>
+                            <li>Referências bibliográficas</li>
+                            <li>Tutoriais e cursos</li>
+                            <li>Artigos científicos</li>
+                        </ul>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-icon">🖼️</div>
+                        <h4>Mídia</h4>
+                        <div class="photo-placeholder small">
+                            <span>📷 Logos / prints</span>
+                        </div>
+                        <div class="photo-placeholder small">
+                            <span>📷 Screenshots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCLUSÃO -->
+        <section class="section" id="conclusao">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2>Conclusão</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <p>Ao final do projeto refletimos sobre os resultados alcançados, os aprendizados obtidos e as possíveis melhorias futuras.</p>
+                        <p>Esta seção resume as contribuições do trabalho, os desafios superados e as perspectivas de continuidade da pesquisa ou do produto desenvolvido.</p>
+                    </div>
+                    <div class="photo-placeholder">
+                        <span>📷 Espaço para foto final</span>
+                        <small>Sugestão: resultado final ou equipe</small>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Diário de Bordo do Projeto. Desenvolvido com HTML, CSS e JS.</p>
+        <div class="container">
+            <p>© 2026 — Diário de Bordo do Projeto Acadêmico</p>
+            <p class="footer-sub">Desenvolvido com HTML, CSS e JavaScript</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
