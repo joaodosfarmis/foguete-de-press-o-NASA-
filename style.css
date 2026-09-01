@@ -84,7 +84,7 @@ body {
 .hero p {
     font-size: 1.15rem;
     color: var(--text-muted);
-    max-width: 480px;
+    max-width: 520px;
     margin: 0 auto;
 }
 
@@ -158,8 +158,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 240px;
-    padding: 2rem;
-    text-align: center;
+    overflow: hidden;
     transition: border-color 0.3s, background 0.3s;
 }
 
@@ -168,25 +167,21 @@ body {
     background: rgba(124, 58, 237, 0.05);
 }
 
-.photo-placeholder span {
-    font-size: 1.1rem;
-    color: #c4b5fd;
-    margin-bottom: 0.4rem;
-}
-
-.photo-placeholder small {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
 }
 
 .photo-placeholder.small {
     min-height: 120px;
     margin: 1rem 0 1.2rem;
-    padding: 1rem;
 }
 
-.photo-placeholder.small span {
-    font-size: 0.95rem;
+.photo-placeholder.small img {
+    min-height: 120px;
 }
 
 /* ===== STEPS ===== */
@@ -301,6 +296,10 @@ body {
     border-color: rgba(6, 182, 212, 0.4);
 }
 
+.material-card-wide {
+    grid-column: span 2;
+}
+
 .material-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -311,23 +310,30 @@ body {
     margin-bottom: 1rem;
 }
 
-.material-card ul {
+.materials-list {
     list-style: none;
     color: var(--text-muted);
     font-size: 0.95rem;
+    margin-top: 0.5rem;
 }
 
-.material-card ul li {
-    padding: 0.35rem 0;
-    padding-left: 1.2rem;
+.materials-list li {
+    padding: 0.45rem 0;
+    padding-left: 1.4rem;
     position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.material-card ul li::before {
-    content: "▸";
+.materials-list li:last-child {
+    border-bottom: none;
+}
+
+.materials-list li::before {
+    content: "•";
     position: absolute;
     left: 0;
     color: var(--accent-2);
+    font-weight: bold;
 }
 
 /* ===== FOOTER ===== */
@@ -346,6 +352,12 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .material-card-wide {
+        grid-column: span 1;
+    }
+}
+
 @media (max-width: 768px) {
     .content-grid,
     .content-grid.reverse {
